@@ -19,6 +19,24 @@
 			
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/add-a-nowrap-span-around-last-word/">Add a ‘nowrap’ span around last word and following element</a></h2>
+			<div class="post-text">
+				<p>This is useful for times where there may be a count value at the end of a title, and you don’t ever want the count to be split from the last word (where it can wrap down to the next line all by itself).</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>set</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>set</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>transform</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>^(.*\s)?([^\s]+)$<span class="token punctuation">"</span></span> <span class="token attr-name">replaceFirst</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$1&lt;span class='nowrap'>$2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>${fn:length(_item.value)}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span></code></pre>
+<p>The accompanying CSS style needs to be added for the .nowrap class.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/add-a-nowrap-span-around-last-word/" class="meta-item post-date">#</a>
+			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></h2>
 			<div class="post-text">
 				<p>For when you have a link in your page styled as a block element, and the area of the link is not clickable in IE. Turns out adding a transparent background somehow makes it clickable.</p>
@@ -32,24 +50,6 @@
 		</div>
 		<section class="metadata">
 			<a href="/post/make-blockstyle-links-work-in-ie/" class="meta-item post-date">#</a>
-			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
-		</section>
-	</section>
-
-	<section class="post">
-		<div class="post-content">
-			<h2 class="title"><a href="/post/add-a-nowrap-span-around-last-word/">Add a ‘nowrap’ span around last word and following element</a></h2>
-			<div class="post-text">
-				<p>This is useful for times where there may be a count value at the end of a title, and you don’t ever want the count to be split from the last word (where it can wrap down to the next line all by itself).</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>set</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>set</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>transform</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>^(.*\s)?([^\s]+)$<span class="token punctuation">"</span></span> <span class="token attr-name">replaceFirst</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$1&lt;span class='nowrap'>$2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>${fn:length(_item.value)}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span></code></pre>
-<p>The accompanying CSS style needs to be added for the .nowrap class.</p>
-
-			</div>
-		</div>
-		<section class="metadata">
-			<a href="/post/add-a-nowrap-span-around-last-word/" class="meta-item post-date">#</a>
 			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
 		</section>
 	</section>
