@@ -15,4 +15,4 @@ For when you have a link in your page styled as a block element, and the area of
 }
 ~~~
 
-A sure telltale sign is if, when you have a border added, you can click the border but not the interior area. No idea why this happens, probably because IE...
+A sure telltale sign is if, when you have a border added, you can click the border but not the interior area. No idea why this happens, probably because IE.
