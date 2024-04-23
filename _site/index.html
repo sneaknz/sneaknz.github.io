@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Codebank</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></h2>
+			<div class="post-text">
+				<p>For when you have a link in your page styled as a block element, and the area of the link is not clickable in IE. Turns out adding a transparent background somehow makes it clickable.</p>
+<pre class="language-less"><code class="language-less"><span class="token selector">.lte9 &amp;</span> <span class="token punctuation">{</span>
+	<span class="token comment">/* Hack because IE doesn't show link as clickable */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A sure telltale sign is if, when you have a border added, you can click the border but not the interior area. No idea why this happens, probably because IE.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/make-blockstyle-links-work-in-ie/" class="meta-item post-date">#</a>
+			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/add-a-nowrap-span-around-last-word/">Add a ‘nowrap’ span around last word and following element</a></h2>
+			<div class="post-text">
+				<p>This is useful for times where there may be a count value at the end of a title, and you don’t ever want the count to be split from the last word (where it can wrap down to the next line all by itself).</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>set</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>set</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_encoded<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>transform</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>^(.*\s)?([^\s]+)$<span class="token punctuation">"</span></span> <span class="token attr-name">replaceFirst</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$1&lt;span class='nowrap'>$2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>out</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>${fn:length(_item.value)}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span></code></pre>
+<p>The accompanying CSS style needs to be added for the .nowrap class.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/add-a-nowrap-span-around-last-word/" class="meta-item post-date">#</a>
+			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
+		</section>
+	</section>
+
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel/">Supermodel</a></li>
+				<li><a href="/tagged/javascript/">Javascript</a></li>
+				<li><a href="/tagged/css/">CSS</a></li>
+				<li><a href="/tagged/terminal/">Terminal</a></li>
+				<li><a href="/tagged/mobile/">Mobile</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>

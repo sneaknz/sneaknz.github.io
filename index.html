@@ -1,0 +1,17 @@
+---
+layout: site.html
+---
+{% for post in collections.post %}
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+			<div class="post-text">
+				{{ post.content }}
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="{{ post.url }}" class="meta-item post-date">#</a>
+			<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a>
+		</section>
+	</section>
+{% endfor %}

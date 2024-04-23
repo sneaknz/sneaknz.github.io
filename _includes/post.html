@@ -1,0 +1,18 @@
+---
+layout: site.html
+---
+<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="{{ page.url }}">{{ title }}</a></h2>
+		<div class="post-text">
+			{{ content }}
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="{{ page.url }}" class="meta-item post-date">#</a>
+		{%- for tag in tags | filterTagList %}
+			<a href="{{ tag.data.url }}" class="tag">{{ tag }}</a>
+		{%- endfor %}
+		<a class="tag" href="https://codebank.tumblr.com/tagged/supermodel">supermodel</a> <a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/{{ page.inputPath }}">~</a>
+	</section>
+</section>
