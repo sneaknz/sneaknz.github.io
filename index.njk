@@ -1,0 +1,22 @@
+---
+layout: site.html
+---
+
+{% for post in collections.post | reverse %}
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+			<div class="post-text">
+				{{ post.content | safe }}
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="{{ post.url }}" class="meta-item post-date">#</a>
+			{%- for tag in post.data.tags | filterTagList %}
+				{%- set tagUrl %}/tagged/{{ tag | slugify }}/{% endset %}
+				<a href="{{ tagUrl }}" class="tag">{{ tag }}</a>
+			{%- endfor %}
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/{{ page.inputPath }}">~</a>
+		</section>
+	</section>
+{% endfor %}
