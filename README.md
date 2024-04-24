@@ -1,2 +1,0 @@
-# sneaknz.github.io
-Codebank
