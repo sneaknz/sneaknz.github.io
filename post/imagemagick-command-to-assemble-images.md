@@ -1,5 +1,6 @@
 ---
 title: Imagemagick command to assemble images into a sprite
+date: 2016-03-21
 tags:
   - terminal
   - imagemagick

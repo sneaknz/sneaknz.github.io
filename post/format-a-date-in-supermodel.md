@@ -1,5 +1,6 @@
 ---
 title: Format a date in Supermodel
+date: 2016-04-22
 tags:
   - supermodel
   - dates

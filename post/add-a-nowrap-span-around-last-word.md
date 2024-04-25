@@ -1,5 +1,6 @@
 ---
 title: Add a ‘nowrap’ span around last word and following element
+date: 2014-05-13
 tags:
   - supermodel
   - formatting

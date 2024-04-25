@@ -1,5 +1,6 @@
 ---
 title: Make block-styled links work in old IE
+date: 2014-03-18
 tags:
   - css
   - ie
