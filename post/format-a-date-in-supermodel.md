@@ -6,7 +6,7 @@ tags:
   - dates
 ---
 
-~~~java
+~~~html
 <fmt:formatDate value="${object.values.date}" pattern="d MMMM yyyy"/>
 ~~~
 
