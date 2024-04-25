@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Basic WYSIWYG field config</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/basic-wywiwyg-field-config/">Basic WYSIWYG field config</a></h2>
+		<div class="post-text">
+			<p>For adding basic configuration options so that only simple text is alowed in a field, add the following into the configuration for the field in Supermodel and adjust to suit.</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">tinyMCEConfig.height</span><span class="token operator">=</span><span class="token number">150</span>
+<span class="token assign-left variable">tinyMCEConfig.toolbar</span><span class="token operator">=</span><span class="token punctuation">\</span>"undo redo <span class="token operator">|</span> bold italic <span class="token operator">|</span> pastetext <span class="token operator">|</span> <span class="token function">link</span> unlink <span class="token operator">|</span> removeformat code<span class="token punctuation">\</span>"
+<span class="token assign-left variable">tinyMCEConfig.statusbar</span><span class="token operator">=</span>false
+<span class="token assign-left variable">tinyMCEConfig.valid_elements</span><span class="token operator">=</span><span class="token punctuation">\</span>"p<span class="token punctuation">[</span>class<span class="token punctuation">]</span><span class="token punctuation">\</span>,em/i<span class="token punctuation">\</span>,strong/b<span class="token punctuation">\</span>,a<span class="token punctuation">[</span>href<span class="token operator">|</span>target<span class="token operator">|</span>title<span class="token punctuation">]</span><span class="token punctuation">\</span>,br<span class="token punctuation">\</span>,span<span class="token punctuation">[</span>class<span class="token punctuation">]</span><span class="token punctuation">\</span>"</code></pre>
+<p>See the <a href="/post/supermodel-wysiwyg-config-options">previous instructions</a> if you need more detailed configuration.</p>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/basic-wywiwyg-field-config/" class="meta-item post-date">#</a>
+			<a href="/tagged/supermodel/" class="tag">supermodel</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/basic-wywiwyg-field-config.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel/">Supermodel</a></li>
+				<li><a href="/tagged/javascript/">Javascript</a></li>
+				<li><a href="/tagged/css/">CSS</a></li>
+				<li><a href="/tagged/terminal/">Terminal</a></li>
+				<li><a href="/tagged/mobile/">Mobile</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>
