@@ -20,6 +20,407 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/hide-empty-elements-with-css/">Hide empty elements with CSS</a></h2>
+			<div class="post-text">
+				<pre class="language-css"><code class="language-css"><span class="token selector">p:empty</span> <span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/hide-empty-elements-with-css/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/convert-br-elements-to-inline-spaces/">Convert &lt;br&gt; elements to inline spaces</a></h2>
+			<div class="post-text">
+				<p>For when you want to remove a <code>&lt;br&gt;</code> so text runs inline. Using <code>display: none;</code> also removes the space, so if you are collapsing sentences this method is better (found in conversation <a href="http://stackoverflow.com/questions/7596647/ignore-br-with-css">here</a>).</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">br</span> <span class="token punctuation">{</span>
+	<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+	
+	<span class="token selector">&amp;:after</span> <span class="token punctuation">{</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/convert-br-elements-to-inline-spaces/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/force-ie8-9s-best-rendering-mode/">Force IE8/9’s best rendering mode</a></h2>
+			<div class="post-text">
+				<p>Add the following to the start of your page, after the usual global Supermodel includes.</p>
+<pre class="language-html"><code class="language-html">&lt;%response.setHeader("X-UA-Compatible", "IE=Edge"); %></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/force-ie8-9s-best-rendering-mode/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/test-whether-you-are-in-dev-environment/">Test whether you are in a dev Supermodel environment</a></h2>
+			<div class="post-text">
+				<p>First add this import to the top of your page:</p>
+<pre class="language-html"><code class="language-html">&lt;%@page import="com.cactuslab.supermodel.Application"%></code></pre>
+<p>Then you can test against the <code>Application.isDevMode()</code> value.</p>
+<pre class="language-html"><code class="language-html">&lt;% if (Application.isDevMode()) { ... } %></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/test-whether-you-are-in-dev-environment/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/download-a-group-of-images/">Download a group of images</a></h2>
+			<div class="post-text">
+				<p>Use Terminal to download images from a group of URLs specified in a carriage-returned list within a text file. Open Terminal, navigate into the folder containing the text file, then run this command:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">xargs</span> <span class="token parameter variable">-n1</span> <span class="token function">curl</span> <span class="token parameter variable">-O</span> textfilename</code></pre>
+<p>The above hasn’t always worked for me, but in those cases the following did the same trick:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">cat</span> textfilename <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> <span class="token function">curl</span> <span class="token parameter variable">-O</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/download-a-group-of-images/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/fix-gap-between-borders-of-rotated-block/">Fix gap between borders of a rotated block element</a></h2>
+			<div class="post-text">
+				<p>When rotating a block element with borders on two edges by 45º (e.g. to create a chevron shape), sometimes where the borders meet there is a white gap. Adding a <code>translate3D</code> value (in particular having the Z value) seems to fix this.</p>
+<pre class="language-css"><code class="language-css"><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3D</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/fix-gap-between-borders-of-rotated-block/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/redirect-to-first-page-in-section/">Redirect to first page in section</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html">&lt;%@include file="/WEB-INF/templates/frag/global.jspf" %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>url</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_url<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pages<span class="token punctuation">"</span></span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">addContextPath</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>attribute</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${object}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>url</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">c:</span>redirect</span> <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${_url}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>Where <code>section</code> in this instance is the variable set up by the routing rules.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/redirect-to-first-page-in-section/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/swap-out-no-js-class-on-html-element/">Swap out &#39;no-js&#39; class on HTML element</a></h2>
+			<div class="post-text">
+				<p>Add this into the <code>&lt;head&gt;</code> of your page to replace <code>.no-js</code> with <code>.js</code> when javascript is available (similar approach to Modernizr)</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>className<span class="token operator">=</span>document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>className<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\bno-js\b</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">' js'</span><span class="token punctuation">;</span> <span class="token comment">// Set approprate js class on html element</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/swap-out-no-js-class-on-html-element/" class="meta-item post-date">#</a>
+				<a href="/tagged/javascript/" class="tag">javascript</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/check-if-javascript-variable-is-defined/">Check if a javascript variable is defined</a></h2>
+			<div class="post-text">
+				<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> variable <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// variable is undefined</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/check-if-javascript-variable-is-defined/" class="meta-item post-date">#</a>
+				<a href="/tagged/javascript/" class="tag">javascript</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/tell-git-to-ignore-changes/">Tell git to ignore changes</a></h2>
+			<div class="post-text">
+				<p>To tell git to ignore any current changes for a particular file, you can type the following command in Terminal (replacing <code>$FILE</code> with the name of the file):</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> update-index --assume-unchanged <span class="token variable">$FILE</span></code></pre>
+<p>To reverse the change, you can alter the line as follows:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> update-index --no-assume-unchanged <span class="token variable">$FILE</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/tell-git-to-ignore-changes/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/git/" class="tag">git</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/use-terminal-to-base64-encode-an-image/">Use Terminal to base64 encode an image</a></h2>
+			<div class="post-text">
+				<p>Generate base64 version of an image:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file</code></pre>
+<p>Do the same, but remove line breaks:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span></code></pre>
+<p>Do the above, but copy the result to the clipboard:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span> <span class="token operator">|</span> pbcopy</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/use-terminal-to-base64-encode-an-image/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/base64/" class="tag">base64</a>
+				<a href="/tagged/images/" class="tag">images</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/using-a-test-to-restrict-foreach-results/">Using a test to restrict forEach results</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>forEach</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>things<span class="token punctuation">"</span></span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_thing<span class="token punctuation">"</span></span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>!empty _thing.values.fieldname<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>forEach</span><span class="token punctuation">></span></span></code></pre>
+<p>Note that the test does not require <code>${ }</code> wrappers like you would usually use in test attributes.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/using-a-test-to-restrict-foreach-results/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/supermodel-wysiwyg-config-options/">Supermodel WYSIWYG config options</a></h2>
+			<div class="post-text">
+				<p>Configuration options for WYSIWYG fields in Supermodel. To add config for a specific field you will need to create a file (.jsp) inside <code>/WEB-INF/supermodel-local/tinymce/config/</code>.
+File names need to match the field name, but lowercased, and should live inside a subfolder with the same name as the parent object. e.g. if you want to add configuration for a 'content' field inside a <code>block.text</code> object, then the structure would look like:</p>
+<pre class="language-shell"><code class="language-shell">config/
+├─ block.text/
+   ├─ content.jsp</code></pre>
+<p>Inside the file you can add your configuration:</p>
+<pre class="language-html"><code class="language-html">&lt;%@include file="/WEB-INF/templates/frag/global.jspf" %>
+tinyMCEConfig.content_css = "<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>static</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/static/css/admin/page-content.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>";
+tinyMCEConfig.height = "250";
+tinyMCEConfig.theme_advanced_blockformats = "p,br";
+tinyMCEConfig.theme_advanced_buttons1 = "styleselect,|,bold,italic,|,link,unlink";
+tinyMCEConfig.valid_elements = "p[class],em/i,strong/b,a[href|target],br";
+tinyMCEConfig.theme_advanced_statusbar_location = "none";</code></pre>
+<p>Ideally you will want to set the <code>tinyMCEConfig.valid_elements</code> to only allow elements that you have provided styling for.
+The <code>theme_advanced_buttons1</code> values determind which buttons show up on the WYSIWYG toolbar, and the most common values are:</p>
+<pre><code>bold, italic, underline, strikethrough, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, cut, copy, paste, undo, redo, link, unlink, image, cleanup, code, hr, removeformat, formatselect, styleselect, sub, sup, blockquote,
+</code></pre>
+<p>You can also turn off all buttons by passing in an empty “” string. Note that this will hide the buttons but not the bar, so to remove that you’ll also need to add some javascript into the bottom of the config file:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#supermodel-custom-admin-styles'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> adminStyles <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	adminStyles <span class="token operator">+=</span> <span class="token string">'#field_fieldCode_tbl tr.mceFirst { display:none; } #field_fieldCode_ifr, table#field_fieldCode_tbl.mceLayout { height: 54px !important; }'</span><span class="token punctuation">;</span>
+	
+	<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'&lt;style id="supermodel-custom-admin-styles">'</span><span class="token operator">+</span>adminStyles<span class="token operator">+</span><span class="token string">'&lt;/style>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Where “fieldCode” needs to be replaced by the relevant ID in the markup for the WYSIWYG wrapper. Adjust the height values to suit based on the font size etc.</p>
+<p>Check the <a href="http://archive.tinymce.com/wiki.php/Configuration3x:valid_elements">TinyMCE docs</a> for information about the <code>valid_elements</code> options.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/supermodel-wysiwyg-config-options/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/wysiwyg/" class="tag">wysiwyg</a>
+				<a href="/tagged/config/" class="tag">config</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/momentum-scrolling-on-ios/">Momentum scrolling on iOS</a></h2>
+			<div class="post-text">
+				<pre class="language-css"><code class="language-css"><span class="token selector">.scroll</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow-y</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span> <span class="token comment">/* has to be scroll */</span>
+	<span class="token property">-webkit-overflow-scrolling</span><span class="token punctuation">:</span> touch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/momentum-scrolling-on-ios/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+				<a href="/tagged/mobile/" class="tag">mobile</a>
+				<a href="/tagged/responsive/" class="tag">responsive</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/create-a-tag-file-in-supermodel/">Create a tag file in Supermodel</a></h2>
+			<div class="post-text">
+				<p>Format the tag content like this, and include any relevant attributes:</p>
+<pre class="language-html"><code class="language-html">&lt;%@tag %>
+&lt;%@include file="/WEB-INF/templates/frag/global.jspf" %>
+&lt;%@attribute name="object" required="true" rtexprvalue="true" type="java.lang.Object" %>
+&lt;%@attribute name="something" required="false" rtexprvalue="true" type="java.lang.String" %>
+&lt;%@attribute name="test" required="false" rtexprvalue="true" type="java.lang.Boolean" %>
+
+[ ... tag template code here, e.g. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>something<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> ]</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/create-a-tag-file-in-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/templates/" class="tag">templates</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/format-a-double-field/">Format a &#39;double&#39; field, show a single decimal if one exists</a></h2>
+			<div class="post-text">
+				<p>Useful for working with currency in Supermodel, or when specific decimal places are required.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fmt:</span>formatNumber</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${_object.values.fieldName}<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#.#<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/format-a-double-field/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/use-sm-include-for-blocks-of-content/">Use sm:include for blocks of content</a></h2>
+			<div class="post-text">
+				<p>E.g. Store templates for each content type in <code>/object/block/</code> and then add into main page like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>include</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blocks<span class="token punctuation">"</span></span> <span class="token attr-name">page</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/block/default<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>This will iterate through all the objects in your collection and output the content using the matching template found in the folder specified by the <code>page</code> attribute.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/use-sm-include-for-blocks-of-content/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/templates/" class="tag">templates</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/get-length-of-object-in-supermodel/">Get length of object in Supermodel</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html">${fn:length(_object)}</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/get-length-of-object-in-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/reverse-order-of-foreach/">Reverse output order of sm:forEach</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>forEach</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blah<span class="token punctuation">"</span></span> <span class="token attr-name">sort</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>reverse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>forEach</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/reverse-order-of-foreach/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/increment-index-in-foreach/">Increment index inside sm:forEach</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>forEach</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>whatever<span class="token punctuation">"</span></span> <span class="token attr-name">varStatus</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_status<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  New index is: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${_status.index+1}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>forEach</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/increment-index-in-foreach/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/get-parent-object-in-supermodel/">Get parent object in Supermodel</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>parent</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_parent<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_parent<span class="token punctuation">"</span></span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>code<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/get-parent-object-in-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/start-a-simple-server-from-terminal/">Start a simple server from Terminal</a></h2>
 			<div class="post-text">
 				<p>As of macOS Monterey 12.3 Python 2 no longer comes pre-installed with the OS, so you will need to install Python 3 (<code>brew install python</code>) if not already installed. You can then run a simple server by navigating to the folder in terminal and entering:</p>

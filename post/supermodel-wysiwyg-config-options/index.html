@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Supermodel WYSIWYG config options</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/supermodel-wysiwyg-config-options/">Supermodel WYSIWYG config options</a></h2>
+		<div class="post-text">
+			<p>Configuration options for WYSIWYG fields in Supermodel. To add config for a specific field you will need to create a file (.jsp) inside <code>/WEB-INF/supermodel-local/tinymce/config/</code>.
+File names need to match the field name, but lowercased, and should live inside a subfolder with the same name as the parent object. e.g. if you want to add configuration for a 'content' field inside a <code>block.text</code> object, then the structure would look like:</p>
+<pre class="language-shell"><code class="language-shell">config/
+├─ block.text/
+   ├─ content.jsp</code></pre>
+<p>Inside the file you can add your configuration:</p>
+<pre class="language-html"><code class="language-html">&lt;%@include file="/WEB-INF/templates/frag/global.jspf" %>
+tinyMCEConfig.content_css = "<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>static</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/static/css/admin/page-content.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>";
+tinyMCEConfig.height = "250";
+tinyMCEConfig.theme_advanced_blockformats = "p,br";
+tinyMCEConfig.theme_advanced_buttons1 = "styleselect,|,bold,italic,|,link,unlink";
+tinyMCEConfig.valid_elements = "p[class],em/i,strong/b,a[href|target],br";
+tinyMCEConfig.theme_advanced_statusbar_location = "none";</code></pre>
+<p>Ideally you will want to set the <code>tinyMCEConfig.valid_elements</code> to only allow elements that you have provided styling for.
+The <code>theme_advanced_buttons1</code> values determind which buttons show up on the WYSIWYG toolbar, and the most common values are:</p>
+<pre><code>bold, italic, underline, strikethrough, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, cut, copy, paste, undo, redo, link, unlink, image, cleanup, code, hr, removeformat, formatselect, styleselect, sub, sup, blockquote,
+</code></pre>
+<p>You can also turn off all buttons by passing in an empty “” string. Note that this will hide the buttons but not the bar, so to remove that you’ll also need to add some javascript into the bottom of the config file:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#supermodel-custom-admin-styles'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> adminStyles <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	adminStyles <span class="token operator">+=</span> <span class="token string">'#field_fieldCode_tbl tr.mceFirst { display:none; } #field_fieldCode_ifr, table#field_fieldCode_tbl.mceLayout { height: 54px !important; }'</span><span class="token punctuation">;</span>
+	
+	<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'&lt;style id="supermodel-custom-admin-styles">'</span><span class="token operator">+</span>adminStyles<span class="token operator">+</span><span class="token string">'&lt;/style>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Where “fieldCode” needs to be replaced by the relevant ID in the markup for the WYSIWYG wrapper. Adjust the height values to suit based on the font size etc.</p>
+<p>Check the <a href="http://archive.tinymce.com/wiki.php/Configuration3x:valid_elements">TinyMCE docs</a> for information about the <code>valid_elements</code> options.</p>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/supermodel-wysiwyg-config-options/" class="meta-item post-date">#</a>
+			<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="/tagged/wysiwyg/" class="tag">wysiwyg</a>
+			<a href="/tagged/config/" class="tag">config</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/supermodel-wysiwyg-config-options.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel/">Supermodel</a></li>
+				<li><a href="/tagged/javascript/">Javascript</a></li>
+				<li><a href="/tagged/css/">CSS</a></li>
+				<li><a href="/tagged/terminal/">Terminal</a></li>
+				<li><a href="/tagged/mobile/">Mobile</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>

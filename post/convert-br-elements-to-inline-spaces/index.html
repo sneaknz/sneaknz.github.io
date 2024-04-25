@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Convert <br> elements to inline spaces</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/convert-br-elements-to-inline-spaces/">Convert &lt;br&gt; elements to inline spaces</a></h2>
+		<div class="post-text">
+			<p>For when you want to remove a <code>&lt;br&gt;</code> so text runs inline. Using <code>display: none;</code> also removes the space, so if you are collapsing sentences this method is better (found in conversation <a href="http://stackoverflow.com/questions/7596647/ignore-br-with-css">here</a>).</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">br</span> <span class="token punctuation">{</span>
+	<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+	
+	<span class="token selector">&amp;:after</span> <span class="token punctuation">{</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/convert-br-elements-to-inline-spaces/" class="meta-item post-date">#</a>
+			<a href="/tagged/css/" class="tag">css</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/convert-br-elements-to-inline-spaces.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel/">Supermodel</a></li>
+				<li><a href="/tagged/javascript/">Javascript</a></li>
+				<li><a href="/tagged/css/">CSS</a></li>
+				<li><a href="/tagged/terminal/">Terminal</a></li>
+				<li><a href="/tagged/mobile/">Mobile</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>
