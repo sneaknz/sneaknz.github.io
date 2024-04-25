@@ -20,6 +20,81 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/start-a-simple-server-from-terminal/">Start a simple server from Terminal</a></h2>
+			<div class="post-text">
+				<p>As of macOS Monterey 12.3 Python 2 no longer comes pre-installed with the OS, so you will need to install Python 3 (<code>brew install python</code>) if not already installed. You can then run a simple server by navigating to the folder in terminal and entering:</p>
+<pre class="language-shell"><code class="language-shell">python3 <span class="token parameter variable">-m</span> http.server <span class="token number">8080</span></code></pre>
+<p>You can change the port number at the end to avoid clashes with any other services running. For machines running Python 2 you can use this command:</p>
+<pre class="language-shell"><code class="language-shell">python <span class="token parameter variable">-m</span> SimpleHTTPServer <span class="token number">8080</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/start-a-simple-server-from-terminal/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/python/" class="tag">python</a>
+				<a href="/tagged/server/" class="tag">server</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/get-file-attributes-in-supermodel/">Get file attributes in Supermodel</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>asset</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_file<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>if</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_file<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>set</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_filename<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>ifNot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>set</span> <span class="token attr-name">var</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_filename<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${_file.file.name}<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>ifNot</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;sm:out name=<span class="token punctuation">"</span></span><span class="token attr-name">_file"</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_filename<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> (${_file.fileSizeString} ${_file.suffix})<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>if</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/get-file-attributes-in-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/files/" class="tag">files</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/format-colours-from-supermodel/">Format colours from Supermodel</a></h2>
+			<div class="post-text">
+				<pre class="language-html"><code class="language-html">#${_colourField.hexString}
+rgb(${_colourField.red}, ${_colourField.green}, ${_colourField.blue})</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/format-colours-from-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/colour/" class="tag">colour</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/strip-httpwww-from-urls/">Strip http://www. from URLs</a></h2>
+			<div class="post-text">
+				<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>unurl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>transform</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>www.<span class="token punctuation">"</span></span> <span class="token attr-name">replaceFirst</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>out</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/strip-httpwww-from-urls/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/output-list-of-pages-within-section/">Output list of pages within section</a></h2>
 			<div class="post-text">
 				<pre class="language-java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>ul<span class="token punctuation">></span></span>
@@ -44,7 +119,7 @@
 		<div class="post-content">
 			<h2 class="title"><a href="/post/format-a-date-in-supermodel/">Format a date in Supermodel</a></h2>
 			<div class="post-text">
-				<pre class="language-java"><code class="language-java"><span class="token operator">&lt;</span>fmt<span class="token operator">:</span>formatDate value<span class="token operator">=</span><span class="token string">"${object.values.date}"</span> pattern<span class="token operator">=</span><span class="token string">"d MMMM yyyy"</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
+				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fmt:</span>formatDate</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${object.values.date}<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d MMMM yyyy<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
 <p><a href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">Here is a list</a> of possible patterns that can be used.</p>
 
 			</div>
@@ -53,6 +128,32 @@
 			<a href="/post/format-a-date-in-supermodel/" class="meta-item post-date">#</a>
 				<a href="/tagged/supermodel/" class="tag">supermodel</a>
 				<a href="/tagged/dates/" class="tag">dates</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/default-to-first-page-within-section/">Add namespaced routing for pages in sections</a></h2>
+			<div class="post-text">
+				<p>In routes.xml:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractPage<span class="token punctuation">"</span></span> <span class="token attr-name">slug-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">slug-space</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pages<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractSection<span class="token punctuation">"</span></span> <span class="token attr-name">child</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+	
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/{section}/{object}/<span class="token punctuation">"</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/default<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>route</span><span class="token punctuation">></span></span></code></pre>
+<p>In configuration for page object in Supermodel model:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">slug.space</span><span class="token operator">=</span>pages
+<span class="token assign-left variable">slug.parentClass</span><span class="token operator">=</span>AbstractSection
+<span class="token assign-left variable">slug.parentField</span><span class="token operator">=</span>pages</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/default-to-first-page-within-section/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/routes/" class="tag">routes</a>
 			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
 		</section>
 	</section>

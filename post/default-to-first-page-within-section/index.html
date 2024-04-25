@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Add namespaced routing for pages in sections</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/default-to-first-page-within-section/">Add namespaced routing for pages in sections</a></h2>
+		<div class="post-text">
+			<p>In routes.xml:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractPage<span class="token punctuation">"</span></span> <span class="token attr-name">slug-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">slug-space</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pages<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractSection<span class="token punctuation">"</span></span> <span class="token attr-name">child</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+	
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/{section}/{object}/<span class="token punctuation">"</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/default<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>route</span><span class="token punctuation">></span></span></code></pre>
+<p>In configuration for page object in Supermodel model:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">slug.space</span><span class="token operator">=</span>pages
+<span class="token assign-left variable">slug.parentClass</span><span class="token operator">=</span>AbstractSection
+<span class="token assign-left variable">slug.parentField</span><span class="token operator">=</span>pages</code></pre>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/default-to-first-page-within-section/" class="meta-item post-date">#</a>
+			<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="/tagged/routes/" class="tag">routes</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/default-to-first-page-within-section.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel/">Supermodel</a></li>
+				<li><a href="/tagged/javascript/">Javascript</a></li>
+				<li><a href="/tagged/css/">CSS</a></li>
+				<li><a href="/tagged/terminal/">Terminal</a></li>
+				<li><a href="/tagged/mobile/">Mobile</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>
