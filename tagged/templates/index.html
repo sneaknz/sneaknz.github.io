@@ -17,16 +17,54 @@
 		</header>
 		<article>
 			
-<h1>Tagged “templates”</h1>
+<section class="post">
+	<h2>Post tagged with “templates”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/post/create-a-tag-file-in-supermodel/">Create a tag file in Supermodel</a></li>
-	
-	  <li><a href="/post/use-sm-include-for-blocks-of-content/">Use sm:include for blocks of content</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/create-a-tag-file-in-supermodel/">Create a tag file in Supermodel</a></h2>
+			<div class="post-text">
+				<p>Format the tag content like this, and include any relevant attributes:</p>
+<pre class="language-html"><code class="language-html">&lt;%@tag %>
+&lt;%@include file="/WEB-INF/templates/frag/global.jspf" %>
+&lt;%@attribute name="object" required="true" rtexprvalue="true" type="java.lang.Object" %>
+&lt;%@attribute name="something" required="false" rtexprvalue="true" type="java.lang.String" %>
+&lt;%@attribute name="test" required="false" rtexprvalue="true" type="java.lang.Boolean" %>
+
+[ ... tag template code here, e.g. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>out</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>something<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> ]</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/create-a-tag-file-in-supermodel/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/templates/" class="tag">templates</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/use-sm-include-for-blocks-of-content/">Use sm:include for blocks of content</a></h2>
+			<div class="post-text">
+				<p>E.g. Store templates for each content type in <code>/object/block/</code> and then add into main page like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>include</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blocks<span class="token punctuation">"</span></span> <span class="token attr-name">page</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/block/default<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>This will iterate through all the objects in your collection and output the content using the matching template found in the folder specified by the <code>page</code> attribute.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/use-sm-include-for-blocks-of-content/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/templates/" class="tag">templates</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

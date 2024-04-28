@@ -17,18 +17,65 @@
 		</header>
 		<article>
 			
-<h1>Tagged “javascript”</h1>
+<section class="post">
+	<h2>Post tagged with “javascript”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/post/foreach-polyfill-for-ie11/">forEach polyfill for IE11</a></li>
-	
-	  <li><a href="/post/swap-out-no-js-class-on-html-element/">Swap out &#39;no-js&#39; class on HTML element</a></li>
-	
-	  <li><a href="/post/check-if-javascript-variable-is-defined/">Check if a javascript variable is defined</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/foreach-polyfill-for-ie11/">forEach polyfill for IE11</a></h2>
+			<div class="post-text">
+				<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>NodeList <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token class-name">NodeList</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">NodeList</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>forEach<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/foreach-polyfill-for-ie11/" class="meta-item post-date">#</a>
+				<a href="/tagged/javascript/" class="tag">javascript</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/swap-out-no-js-class-on-html-element/">Swap out &#39;no-js&#39; class on HTML element</a></h2>
+			<div class="post-text">
+				<p>Add this into the <code>&lt;head&gt;</code> of your page to replace <code>.no-js</code> with <code>.js</code> when javascript is available (similar approach to Modernizr)</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>className<span class="token operator">=</span>document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>className<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\bno-js\b</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">' js'</span><span class="token punctuation">;</span> <span class="token comment">// Set approprate js class on html element</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/swap-out-no-js-class-on-html-element/" class="meta-item post-date">#</a>
+				<a href="/tagged/javascript/" class="tag">javascript</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/check-if-javascript-variable-is-defined/">Check if a javascript variable is defined</a></h2>
+			<div class="post-text">
+				<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> variable <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// variable is undefined</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/check-if-javascript-variable-is-defined/" class="meta-item post-date">#</a>
+				<a href="/tagged/javascript/" class="tag">javascript</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

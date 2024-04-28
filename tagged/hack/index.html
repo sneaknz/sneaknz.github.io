@@ -17,14 +17,35 @@
 		</header>
 		<article>
 			
-<h1>Tagged “hack”</h1>
+<section class="post">
+	<h2>Post tagged with “hack”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></h2>
+			<div class="post-text">
+				<p>For when you have a link in your page styled as a block element, and the area of the link is not clickable in IE. Turns out adding a transparent background somehow makes it clickable.</p>
+<pre class="language-less"><code class="language-less"><span class="token selector">.lte9 &amp;</span> <span class="token punctuation">{</span>
+	<span class="token comment">/* Hack because IE doesn't show link as clickable */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A sure telltale sign is if, when you have a border added, you can click the border but not the interior area. No idea why this happens, probably because IE...</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/make-blockstyle-links-work-in-ie/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+				<a href="/tagged/ie/" class="tag">ie</a>
+				<a href="/tagged/hack/" class="tag">hack</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

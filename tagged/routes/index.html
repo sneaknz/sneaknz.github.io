@@ -17,14 +17,39 @@
 		</header>
 		<article>
 			
-<h1>Tagged “routes”</h1>
+<section class="post">
+	<h2>Post tagged with “routes”</h2>
+</section>
 
-<ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/default-to-first-page-within-section/">Add namespaced routing for pages in sections</a></h2>
+			<div class="post-text">
+				<p>In routes.xml:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractPage<span class="token punctuation">"</span></span> <span class="token attr-name">slug-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">slug-space</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pages<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span> <span class="token attr-name">class-code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AbstractSection<span class="token punctuation">"</span></span> <span class="token attr-name">child</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>object<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 	
-	
-	  <li><a href="/post/default-to-first-page-within-section/">Add namespaced routing for pages in sections</a></li>
-	
-</ol>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>route</span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/{section}/{object}/<span class="token punctuation">"</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/default<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>route</span><span class="token punctuation">></span></span></code></pre>
+<p>In configuration for page object in Supermodel model:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">slug.space</span><span class="token operator">=</span>pages
+<span class="token assign-left variable">slug.parentClass</span><span class="token operator">=</span>AbstractSection
+<span class="token assign-left variable">slug.parentField</span><span class="token operator">=</span>pages</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/default-to-first-page-within-section/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/routes/" class="tag">routes</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

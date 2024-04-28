@@ -17,30 +17,181 @@
 		</header>
 		<article>
 			
-<h1>Tagged “css”</h1>
+<section class="post">
+	<h2>Post tagged with “css”</h2>
+</section>
 
-<ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/create-row-of-equal-height-images/">Create a row of equal height images that have different aspect ratios</a></h2>
+			<div class="post-text">
+				<p><a href="https://www.terluinwebdesign.nl/en/css/images-of-varying-aspect-ratio-fill-available-space-but-keep-heights-equal/">Article here</a></p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/create-row-of-equal-height-images/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+				<a href="/tagged/images/" class="tag">images</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/wrapping-an-unkown-number-of-elements-with-grid/">Wrapping an unknown number of elements with CSS grid</a></h2>
+			<div class="post-text">
+				<p>A technique using grid layout to handle the layout of multiple blocks on a page that need to wrap at different points as the browser size changes, using only a couple of lines of code and no media queries (a technique called ’<a href="https://medium.com/@bogdanfromkyiv/ram-technique-in-css-90f092b105ae">RAM</a>’)</p>
+<pre class="language-css"><code class="language-css"><span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+<span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>auto-fit<span class="token punctuation">,</span> <span class="token function">minmax</span><span class="token punctuation">(</span>15em<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/wrapping-an-unkown-number-of-elements-with-grid/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/smooth-scrolling-to-anchors/">Smooth scrolling to anchors</a></h2>
+			<div class="post-text">
+				<p>For a CSS-only methode to provide smooth scrolling action to anchors, you can add the following:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">html</span> <span class="token punctuation">{</span>
+	<span class="token property">scroll-behavior</span><span class="token punctuation">:</span> smooth<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>It is good practice to also respect the users wishes if they want to avoid fast movement, so you can disable for those users by also adding:</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">prefers-reduced-motion</span><span class="token punctuation">:</span> reduce<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token selector">html</span> <span class="token punctuation">{</span>
+		<span class="token property">scroll-behavior</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/smooth-scrolling-to-anchors/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/fix-overflow-hidden-for-video/">Fix overflow:hidden for video</a></h2>
+			<div class="post-text">
+				<p>This fixes issues where overflow hidden doesn’t work on elements in Webkit browsers (e.g. using border-radius to crop the edges of a video). Apply this mask to the containing <code>overflow:hidden</code> element.</p>
+<pre class="language-css"><code class="language-css"><span class="token property">-webkit-mask-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC<span class="token punctuation">)</span></span><span class="token punctuation">;</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/fix-overflow-hidden-for-video/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/hide-empty-elements-with-css/">Hide empty elements with CSS</a></h2>
+			<div class="post-text">
+				<pre class="language-css"><code class="language-css"><span class="token selector">p:empty</span> <span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/hide-empty-elements-with-css/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/convert-br-elements-to-inline-spaces/">Convert &lt;br&gt; elements to inline spaces</a></h2>
+			<div class="post-text">
+				<p>For when you want to remove a <code>&lt;br&gt;</code> so text runs inline. Using <code>display: none;</code> also removes the space, so if you are collapsing sentences this method is better (found in conversation <a href="http://stackoverflow.com/questions/7596647/ignore-br-with-css">here</a>).</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">br</span> <span class="token punctuation">{</span>
+	<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
 	
-	
-	  <li><a href="/post/create-row-of-equal-height-images/">Create a row of equal height images that have different aspect ratios</a></li>
-	
-	  <li><a href="/post/wrapping-an-unkown-number-of-elements-with-grid/">Wrapping an unknown number of elements with CSS grid</a></li>
-	
-	  <li><a href="/post/smooth-scrolling-to-anchors/">Smooth scrolling to anchors</a></li>
-	
-	  <li><a href="/post/fix-overflow-hidden-for-video/">Fix overflow:hidden for video</a></li>
-	
-	  <li><a href="/post/hide-empty-elements-with-css/">Hide empty elements with CSS</a></li>
-	
-	  <li><a href="/post/convert-br-elements-to-inline-spaces/">Convert &lt;br&gt; elements to inline spaces</a></li>
-	
-	  <li><a href="/post/fix-gap-between-borders-of-rotated-block/">Fix gap between borders of a rotated block element</a></li>
-	
-	  <li><a href="/post/momentum-scrolling-on-ios/">Momentum scrolling on iOS</a></li>
-	
-	  <li><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></li>
-	
-</ol>
+	<span class="token selector">&amp;:after</span> <span class="token punctuation">{</span>
+		<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/convert-br-elements-to-inline-spaces/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/fix-gap-between-borders-of-rotated-block/">Fix gap between borders of a rotated block element</a></h2>
+			<div class="post-text">
+				<p>When rotating a block element with borders on two edges by 45º (e.g. to create a chevron shape), sometimes where the borders meet there is a white gap. Adding a <code>translate3D</code> value (in particular having the Z value) seems to fix this.</p>
+<pre class="language-css"><code class="language-css"><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate3D</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span> <span class="token function">rotate</span><span class="token punctuation">(</span>45deg<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/fix-gap-between-borders-of-rotated-block/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/momentum-scrolling-on-ios/">Momentum scrolling on iOS</a></h2>
+			<div class="post-text">
+				<pre class="language-css"><code class="language-css"><span class="token selector">.scroll</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow-y</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span> <span class="token comment">/* has to be scroll */</span>
+	<span class="token property">-webkit-overflow-scrolling</span><span class="token punctuation">:</span> touch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/momentum-scrolling-on-ios/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+				<a href="/tagged/mobile/" class="tag">mobile</a>
+				<a href="/tagged/responsive/" class="tag">responsive</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/make-blockstyle-links-work-in-ie/">Make block-styled links work in old IE</a></h2>
+			<div class="post-text">
+				<p>For when you have a link in your page styled as a block element, and the area of the link is not clickable in IE. Turns out adding a transparent background somehow makes it clickable.</p>
+<pre class="language-less"><code class="language-less"><span class="token selector">.lte9 &amp;</span> <span class="token punctuation">{</span>
+	<span class="token comment">/* Hack because IE doesn't show link as clickable */</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A sure telltale sign is if, when you have a border added, you can click the border but not the interior area. No idea why this happens, probably because IE...</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/make-blockstyle-links-work-in-ie/" class="meta-item post-date">#</a>
+				<a href="/tagged/css/" class="tag">css</a>
+				<a href="/tagged/ie/" class="tag">ie</a>
+				<a href="/tagged/hack/" class="tag">hack</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

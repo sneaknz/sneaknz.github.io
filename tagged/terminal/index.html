@@ -17,28 +17,161 @@
 		</header>
 		<article>
 			
-<h1>Tagged “terminal”</h1>
+<section class="post">
+	<h2>Post tagged with “terminal”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/_template/">Title</a></li>
-	
-	  <li><a href="/post/convert-images-to-an-animated-gif/">Convert images to an animated GIF</a></li>
-	
-	  <li><a href="/post/combine-images-into-an-icon/">Combine images into an icon</a></li>
-	
-	  <li><a href="/post/download-a-group-of-images/">Download a group of images</a></li>
-	
-	  <li><a href="/post/tell-git-to-ignore-changes/">Tell git to ignore changes</a></li>
-	
-	  <li><a href="/post/use-terminal-to-base64-encode-an-image/">Use Terminal to base64 encode an image</a></li>
-	
-	  <li><a href="/post/start-a-simple-server-from-terminal/">Start a simple server from Terminal</a></li>
-	
-	  <li><a href="/post/imagemagick-command-to-assemble-images/">Imagemagick command to assemble images into a sprite</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/_template/">Title</a></h2>
+			<div class="post-text">
+				<p>Change the dimensions and tile layout to suit the size of images and number of rows/columns you desire.</p>
+<pre class="language-shell"><code class="language-shell">montage <span class="token parameter variable">-background</span> transparent <span class="token parameter variable">-geometry</span> 1500x344+0+0 <span class="token parameter variable">-tile</span> 4x13 *.png sprite3.png</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/_template/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/convert-images-to-an-animated-gif/">Convert images to an animated GIF</a></h2>
+			<div class="post-text">
+				<p>If you have ImageMagick installed you can use Terminal to convert a folder of images into an animated GIF. In Terminal, <code>cd</code> into the folder where your images are kept and then run the following script (modifying to suit):</p>
+<pre class="language-shell"><code class="language-shell">convert <span class="token parameter variable">-delay</span> <span class="token number">10</span> <span class="token parameter variable">-loop</span> <span class="token number">0</span> *.png animated.gif</code></pre>
+<p>You can adjust the delay value to speed up or slow down the animation, and edit <code>*.png</code> to match your image naming/type (e.g it may be something like <code>source-*.jpg</code>). It can be a good idea to number your frame images to ensure proper ordering.</p>
+<p>Note: the script above will layer each successive image on top of the previous, so if you are working with transparent images you may want to adjust it slightly so that the frame is wiped on each pass first:</p>
+<pre class="language-shell"><code class="language-shell">convert <span class="token parameter variable">-delay</span> <span class="token number">10</span> <span class="token parameter variable">-loop</span> <span class="token number">0</span> *.png <span class="token parameter variable">-set</span> dispose background animated.gif</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/convert-images-to-an-animated-gif/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/combine-images-into-an-icon/">Combine images into an icon</a></h2>
+			<div class="post-text">
+				<p>Use Terminal to combine multiple PNG images into a single .ico icon file. Open Terminal, navigate into the folder containing the image files, then run this command:</p>
+<pre class="language-shell"><code class="language-shell">convert <span class="token number">16</span>.png <span class="token number">32</span>.png <span class="token number">48</span>.png <span class="token number">256</span>.png favicon.ico</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/combine-images-into-an-icon/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/download-a-group-of-images/">Download a group of images</a></h2>
+			<div class="post-text">
+				<p>Use Terminal to download images from a group of URLs specified in a carriage-returned list within a text file. Open Terminal, navigate into the folder containing the text file, then run this command:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">xargs</span> <span class="token parameter variable">-n1</span> <span class="token function">curl</span> <span class="token parameter variable">-O</span> textfilename</code></pre>
+<p>The above hasn’t always worked for me, but in those cases the following did the same trick:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">cat</span> textfilename <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> <span class="token function">curl</span> <span class="token parameter variable">-O</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/download-a-group-of-images/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/tell-git-to-ignore-changes/">Tell git to ignore changes</a></h2>
+			<div class="post-text">
+				<p>To tell git to ignore any current changes for a particular file, you can type the following command in Terminal (replacing <code>$FILE</code> with the name of the file):</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> update-index --assume-unchanged <span class="token variable">$FILE</span></code></pre>
+<p>To reverse the change, you can alter the line as follows:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> update-index --no-assume-unchanged <span class="token variable">$FILE</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/tell-git-to-ignore-changes/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/git/" class="tag">git</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/use-terminal-to-base64-encode-an-image/">Use Terminal to base64 encode an image</a></h2>
+			<div class="post-text">
+				<p>Generate base64 version of an image:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file</code></pre>
+<p>Do the same, but remove line breaks:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span></code></pre>
+<p>Do the above, but copy the result to the clipboard:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span> <span class="token operator">|</span> pbcopy</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/use-terminal-to-base64-encode-an-image/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/base64/" class="tag">base64</a>
+				<a href="/tagged/images/" class="tag">images</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/start-a-simple-server-from-terminal/">Start a simple server from Terminal</a></h2>
+			<div class="post-text">
+				<p>As of macOS Monterey 12.3 Python 2 no longer comes pre-installed with the OS, so you will need to install Python 3 (<code>brew install python</code>) if not already installed. You can then run a simple server by navigating to the folder in terminal and entering:</p>
+<pre class="language-shell"><code class="language-shell">python3 <span class="token parameter variable">-m</span> http.server <span class="token number">8080</span></code></pre>
+<p>You can change the port number at the end to avoid clashes with any other services running. For machines running Python 2 you can use this command:</p>
+<pre class="language-shell"><code class="language-shell">python <span class="token parameter variable">-m</span> SimpleHTTPServer <span class="token number">8080</span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/start-a-simple-server-from-terminal/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/python/" class="tag">python</a>
+				<a href="/tagged/server/" class="tag">server</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/imagemagick-command-to-assemble-images/">Imagemagick command to assemble images into a sprite</a></h2>
+			<div class="post-text">
+				<p>Change the dimensions and tile layout to suit the size of images and number of rows/columns you desire.</p>
+<pre class="language-shell"><code class="language-shell">montage <span class="token parameter variable">-background</span> transparent <span class="token parameter variable">-geometry</span> 1500x344+0+0 <span class="token parameter variable">-tile</span> 4x13 *.png sprite3.png</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/imagemagick-command-to-assemble-images/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/imagemagick/" class="tag">imagemagick</a>
+				<a href="/tagged/images/" class="tag">images</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

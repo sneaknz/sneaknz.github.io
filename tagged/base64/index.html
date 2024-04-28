@@ -17,14 +17,35 @@
 		</header>
 		<article>
 			
-<h1>Tagged “base64”</h1>
+<section class="post">
+	<h2>Post tagged with “base64”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/post/use-terminal-to-base64-encode-an-image/">Use Terminal to base64 encode an image</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/use-terminal-to-base64-encode-an-image/">Use Terminal to base64 encode an image</a></h2>
+			<div class="post-text">
+				<p>Generate base64 version of an image:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file</code></pre>
+<p>Do the same, but remove line breaks:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span></code></pre>
+<p>Do the above, but copy the result to the clipboard:</p>
+<pre class="language-shell"><code class="language-shell">openssl base64 <span class="token operator">&lt;</span> path/to/file.png <span class="token operator">|</span> <span class="token function">tr</span> <span class="token parameter variable">-d</span> <span class="token string">'\n'</span> <span class="token operator">|</span> pbcopy</code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/use-terminal-to-base64-encode-an-image/" class="meta-item post-date">#</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+				<a href="/tagged/base64/" class="tag">base64</a>
+				<a href="/tagged/images/" class="tag">images</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />

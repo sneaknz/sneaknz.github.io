@@ -17,14 +17,35 @@
 		</header>
 		<article>
 			
-<h1>Tagged “navigation”</h1>
+<section class="post">
+	<h2>Post tagged with “navigation”</h2>
+</section>
 
-<ol>
-	
-	
-	  <li><a href="/post/output-list-of-pages-within-section/">Output list of pages within section</a></li>
-	
-</ol>
+
+
+	<section class="post">
+		<div class="post-content">
+			<h2 class="title"><a href="/post/output-list-of-pages-within-section/">Output list of pages within section</a></h2>
+			<div class="post-text">
+				<pre class="language-java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>ul<span class="token punctuation">></span></span>
+    <span class="token operator">&lt;</span>sm<span class="token operator">:</span>ancestor <span class="token keyword">var</span><span class="token operator">=</span><span class="token string">"_section"</span> classCodes<span class="token operator">=</span><span class="token string">"AbstractSection"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>sm<span class="token operator">:</span>forEach name<span class="token operator">=</span><span class="token string">"_section"</span> field<span class="token operator">=</span><span class="token string">"pages"</span> <span class="token keyword">var</span><span class="token operator">=</span><span class="token string">"_page"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>li<span class="token operator">&lt;</span>sm<span class="token operator">:</span><span class="token keyword">if</span> test<span class="token operator">=</span><span class="token string">"${object eq _page}"</span><span class="token operator">></span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"selected"</span><span class="token operator">&lt;</span><span class="token operator">/</span>sm<span class="token operator">:</span><span class="token keyword">if</span><span class="token operator">>></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;sm:url name="</span>_page<span class="token string">"/>"</span><span class="token operator">></span><span class="token operator">&lt;</span>sm<span class="token operator">:</span>out name<span class="token operator">=</span><span class="token string">"_page"</span><span class="token operator">/</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>sm<span class="token operator">:</span>forEach<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span></code></pre>
+<p>Note that if you are using namespaced parent slugging then the <code>&lt;sm:ancestor /&gt;</code> part of this is likely unnecessary, as the routing will also set up a variable for the parent which you can reference (e.g. <code>name=&quot;section&quot;</code>).</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/output-list-of-pages-within-section/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/navigation/" class="tag">navigation</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+
 		</article>
 		
 		<input type="checkbox" id="mobile-nav" />
