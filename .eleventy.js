@@ -2,6 +2,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("css/*.css");
+	eleventyConfig.addPassthroughCopy("CNAME");
 	eleventyConfig.addPlugin(syntaxHighlight);
 
 	// Return all the tags used in a collection
