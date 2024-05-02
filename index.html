@@ -20,7 +20,7 @@
 
 	<section class="post">
 		<div class="post-content">
-			<h2 class="title"><a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/"></a></h2>
+			<h2 class="title"><a href="/post/fixing-dns-for-a-gandi-subdomain-with-github-pages/">Fixing DNS for a Gandi subdomain when using Github Pages</a></h2>
 			<div class="post-text">
 				<p>When trying to point a subdomain to Github Pages from a Gandi DNS, I managed to get the domain working but Pages wouldn't allow me to enable the SSL option. When using the Github assistant to troubleshoot the issue it told me that an A record existed, when in fact I had only added a CNAME record.</p>
 <p>After some searching I <a href="https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297">found this gist</a> which proved to be the answer — the default Gandi live DNS includes some items that <em>need to be deleted</em> before Github Pages will be able to use SSL.</p>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<section class="metadata">
-			<a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/" class="meta-item post-date">#</a>
+			<a href="/post/fixing-dns-for-a-gandi-subdomain-with-github-pages/" class="meta-item post-date">#</a>
 				<a href="/tagged/hosting/" class="tag">hosting</a>
 				<a href="/tagged/github/" class="tag">github</a>
 				<a href="/tagged/random/" class="tag">random</a>
