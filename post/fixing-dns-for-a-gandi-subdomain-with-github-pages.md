@@ -1,5 +1,5 @@
 ---
-title: 
+title: Fixing DNS for a Gandi subdomain when using Github Pages
 date: 2024-05-02
 tags:
   - hosting
