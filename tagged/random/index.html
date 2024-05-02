@@ -18,24 +18,25 @@
 		<article>
 			
 <section class="post">
-	<h2>Post tagged with “dates”</h2>
+	<h2>Post tagged with “random”</h2>
 </section>
 
 
 
 	<section class="post">
 		<div class="post-content">
-			<h2 class="title"><a href="/post/format-a-date-in-supermodel/">Format a date in Supermodel</a></h2>
+			<h2 class="title"><a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/"></a></h2>
 			<div class="post-text">
-				<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">fmt:</span>formatDate</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${object.values.date}<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d MMMM yyyy<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
-<p><a href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">Here is a list</a> of possible patterns that can be used.</p>
+				<p>When trying to point a subdomain to Github Pages from a Gandi DNS, I managed to get the domain working but Pages wouldn't allow me to enable the SSL option. When using the Github assistant to troubleshoot the issue it told me that an A record existed, when in fact I had only added a CNAME record.</p>
+<p>After some searching I <a href="https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297">found this gist</a> which proved to be the answer — the default Gandi live DNS includes some items that <em>need to be deleted</em> before Github Pages will be able to use SSL.</p>
 
 			</div>
 		</div>
 		<section class="metadata">
-			<a href="/post/format-a-date-in-supermodel/" class="meta-item post-date">#</a>
-				<a href="/tagged/supermodel/" class="tag">supermodel</a>
-				<a href="/tagged/dates/" class="tag">dates</a>
+			<a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/" class="meta-item post-date">#</a>
+				<a href="/tagged/hosting/" class="tag">hosting</a>
+				<a href="/tagged/github/" class="tag">github</a>
+				<a href="/tagged/random/" class="tag">random</a>
 			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
 		</section>
 	</section>

@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	
-	<title>Combine images into an icon</title>
+	<title>Codebank</title>
 
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/css/prism.css">
@@ -18,17 +18,19 @@
 		<article>
 			<section class="post">
 	<div class="post-content">
-		<h2 class="title"><a href="/post/combine-images-into-an-icon/">Combine images into an icon</a></h2>
+		<h2 class="title"><a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/"></a></h2>
 		<div class="post-text">
-			<p>Use Terminal to combine multiple PNG images into a single .ico icon file. Open Terminal, navigate into the folder containing the image files, then run this command:</p>
-<pre class="language-shell"><code class="language-shell">convert <span class="token number">16</span>.png <span class="token number">32</span>.png <span class="token number">48</span>.png <span class="token number">256</span>.png favicon.ico</code></pre>
+			<p>When trying to point a subdomain to Github Pages from a Gandi DNS, I managed to get the domain working but Pages wouldn't allow me to enable the SSL option. When using the Github assistant to troubleshoot the issue it told me that an A record existed, when in fact I had only added a CNAME record.</p>
+<p>After some searching I <a href="https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297">found this gist</a> which proved to be the answer — the default Gandi live DNS includes some items that <em>need to be deleted</em> before Github Pages will be able to use SSL.</p>
 
 		</div>
 	</div>
 	<section class="metadata">
-		<a href="/post/combine-images-into-an-icon/" class="meta-item post-date">#</a>
-			<a href="/tagged/terminal/" class="tag">terminal</a>
-		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/combine-images-into-an-icon.md">~</a>
+		<a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/" class="meta-item post-date">#</a>
+			<a href="/tagged/hosting/" class="tag">hosting</a>
+			<a href="/tagged/github/" class="tag">github</a>
+			<a href="/tagged/random/" class="tag">random</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/setting-up-gandi-subdomain-dns-for-github-pages.md">~</a>
 	</section>
 </section>
 		</article>

@@ -20,6 +20,24 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/"></a></h2>
+			<div class="post-text">
+				<p>When trying to point a subdomain to Github Pages from a Gandi DNS, I managed to get the domain working but Pages wouldn't allow me to enable the SSL option. When using the Github assistant to troubleshoot the issue it told me that an A record existed, when in fact I had only added a CNAME record.</p>
+<p>After some searching I <a href="https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297">found this gist</a> which proved to be the answer — the default Gandi live DNS includes some items that <em>need to be deleted</em> before Github Pages will be able to use SSL.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/setting-up-gandi-subdomain-dns-for-github-pages/" class="meta-item post-date">#</a>
+				<a href="/tagged/hosting/" class="tag">hosting</a>
+				<a href="/tagged/github/" class="tag">github</a>
+				<a href="/tagged/random/" class="tag">random</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/create-row-of-equal-height-images/">Create a row of equal height images that have different aspect ratios</a></h2>
 			<div class="post-text">
 				<p><a href="https://www.terluinwebdesign.nl/en/css/images-of-varying-aspect-ratio-fill-available-space-but-keep-heights-equal/">Article here</a></p>
@@ -924,6 +942,7 @@ rgb(${_colourField.red}, ${_colourField.green}, ${_colourField.blue})</code></pr
 				<li><a href="/tagged/css">CSS</a></li>
 				<li><a href="/tagged/terminal">Terminal</a></li>
 				<li><a href="/tagged/mobile">Mobile</a></li>
+				<li><a href="/tagged/hosting">Hosting</a></li>
 			</ul>
 			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
 		</aside>
