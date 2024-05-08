@@ -20,6 +20,23 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/deploy-old-supermodel-site/">Deploying an old Supermodel site from an M-series Mac</a></h2>
+			<div class="post-text">
+				<p>For some of our older Supermodel sites you won't be able to run the deploy script successfully because the sites require and older version of Java. To fix this issue you need to tell the deploy to use Java 8 instead of whatever more current version you are running on your machine:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>/usr/libexec/java_home <span class="token parameter variable">-v</span> <span class="token number">1.8</span><span class="token variable">)</span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/deploy-old-supermodel-site/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+				<a href="/tagged/terminal/" class="tag">terminal</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/fixing-dns-for-a-gandi-subdomain-with-github-pages/">Fixing DNS for a Gandi subdomain when using Github Pages</a></h2>
 			<div class="post-text">
 				<p>When trying to point a subdomain to Github Pages from a Gandi DNS, I managed to get the domain working but Pages wouldn't allow me to enable the SSL option. When using the Github assistant to troubleshoot the issue it told me that an A record existed, when in fact I had only added a CNAME record.</p>
