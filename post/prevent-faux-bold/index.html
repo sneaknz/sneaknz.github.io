@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="robots" content="noindex">
+	
+	<title>Prevent faux bold or italics</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/prevent-faux-bold/">Prevent faux bold or italics</a></h2>
+		<div class="post-text">
+			<p>The <code>font-synthesis</code> CSS property lets you specify whether or not the browser is allowed to synthesize the bold, italic, small-caps, and/or subscript and superscript typefaces when they are missing in the specified <code>font-family</code>. This is mostly important when fonts are included in a way where each weight is a separate file included using <code>@font-face</code> with the <code>font-weight</code> specified as <code>normal</code>, or if a font only has a single weight (i.e. a display font where bold and/or italics don‘t exist).</p>
+<p>Setting <code>font-synthesis: none;</code> tells the browser not to create fake versions of bold/italics if they don‘t exist. A way to apply this across all your styles is to include this rule:</p>
+<pre class="language-shell"><code class="language-shell">* <span class="token punctuation">{</span>
+	font-synthesis: none<span class="token punctuation">;</span>	
+<span class="token punctuation">}</span></code></pre>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/prevent-faux-bold/" class="meta-item post-date">#</a>
+			<a href="/tagged/css/" class="tag">css</a>
+			<a href="/tagged/fonts/" class="tag">fonts</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/prevent-faux-bold.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel">Supermodel</a></li>
+				<li><a href="/tagged/javascript">Javascript</a></li>
+				<li><a href="/tagged/css">CSS</a></li>
+				<li><a href="/tagged/terminal">Terminal</a></li>
+				<li><a href="/tagged/mobile">Mobile</a></li>
+				<li><a href="/tagged/hosting">Hosting</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>
