@@ -301,6 +301,8 @@
 			<div class="post-text">
 				<p>Use Terminal to combine multiple PNG images into a single .ico icon file. Open Terminal, navigate into the folder containing the image files, then run this command:</p>
 <pre class="language-shell"><code class="language-shell">convert <span class="token number">16</span>.png <span class="token number">32</span>.png <span class="token number">48</span>.png <span class="token number">256</span>.png favicon.ico</code></pre>
+<p><strong>Note:</strong> since the most recent system update that uses ImageMagick 7 you now need to preface the command with 'magick' instead of 'convert':</p>
+<pre class="language-shell"><code class="language-shell">magick <span class="token number">16</span>.png <span class="token number">32</span>.png <span class="token number">48</span>.png <span class="token number">256</span>.png favicon.ico</code></pre>
 
 			</div>
 		</div>
