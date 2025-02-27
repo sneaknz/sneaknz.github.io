@@ -10,3 +10,9 @@ Use Terminal to combine multiple PNG images into a single .ico icon file. Open T
 ~~~shell
 convert 16.png 32.png 48.png 256.png favicon.ico
 ~~~
+
+**Note:** since the most recent system update that uses ImageMagick 7 you now need to preface the command with 'magick' instead of 'convert': 
+
+~~~shell
+magick 16.png 32.png 48.png 256.png favicon.ico
+~~~
