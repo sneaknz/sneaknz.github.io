@@ -25,7 +25,7 @@
 			<div class="post-text">
 				<p>The <code>font-synthesis</code> CSS property lets you specify whether or not the browser is allowed to synthesize the bold, italic, small-caps, and/or subscript and superscript typefaces when they are missing in the specified <code>font-family</code>. This is mostly important when fonts are included in a way where each weight is a separate file included using <code>@font-face</code> with the <code>font-weight</code> specified as <code>normal</code>, or if a font only has a single weight (i.e. a display font where bold and/or italics don’t exist).</p>
 <p>Setting <code>font-synthesis: none;</code> tells the browser not to create fake versions of bold/italics if they don’t exist. A way to apply this across all your styles is to include this rule:</p>
-<pre class="language-shell"><code class="language-shell">* <span class="token punctuation">{</span>
+<pre class="language-shell"><code class="language-shell">html <span class="token punctuation">{</span>
 	font-synthesis: none<span class="token punctuation">;</span>	
 <span class="token punctuation">}</span></code></pre>
 
