@@ -21,6 +21,25 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/pass-attributes-to-a-supermodel-include/">Pass attributes to a Supermodel include</a></h2>
+			<div class="post-text">
+				<p>When uaing <code>&lt;sm:include&gt;</code> to output a collection of data, it is possible to pass attributes that can be used by the included templates:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>include</span> <span class="token attr-name">field</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blocks<span class="token punctuation">"</span></span> <span class="token attr-name">page</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/object/blocks/default<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>attribute</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>theme<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dark<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">sm:</span>attribute</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>parent<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>${object}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">sm:</span>include</span><span class="token punctuation">></span></span></code></pre>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/pass-attributes-to-a-supermodel-include/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/prevent-faux-bold/">Prevent faux bold or italics</a></h2>
 			<div class="post-text">
 				<p>The <code>font-synthesis</code> CSS property lets you specify whether or not the browser is allowed to synthesize the bold, italic, small-caps, and/or subscript and superscript typefaces when they are missing in the specified <code>font-family</code>. This is mostly important when fonts are included in a way where each weight is a separate file included using <code>@font-face</code> with the <code>font-weight</code> specified as <code>normal</code>, or if a font only has a single weight (i.e. a display font where bold and/or italics don’t exist).</p>
