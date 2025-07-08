@@ -11,7 +11,7 @@ The `font-synthesis` CSS property lets you specify whether or not the browser is
 Setting `font-synthesis: none;` tells the browser not to create fake versions of bold/italics if they don’t exist. A way to apply this across all your styles is to include this rule:
 
 ~~~shell
-* {
+html {
 	font-synthesis: none;	
 }
 ~~~
