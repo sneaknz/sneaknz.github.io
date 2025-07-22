@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="robots" content="noindex">
+	
+	<title>Allow SVG as an image upload</title>
+
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1><a href="/">Codebank</a></h1>
+		</header>
+		<article>
+			<section class="post">
+	<div class="post-content">
+		<h2 class="title"><a href="/post/allow-svg-as-an-image-upload/">Allow SVG as an image upload</a></h2>
+		<div class="post-text">
+			<p>By default Supermodel does not allow you to upload an SVG into an <code>image</code> field type, but you can allow this by adding configuration for that field to specify all the allowed types:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/gif
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/jpeg
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/png
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/svg+xml
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/webp</code></pre>
+<p>Note that you can't only add the missing SVG type, you must include <em>all</em> the types that you want available.</p>
+
+		</div>
+	</div>
+	<section class="metadata">
+		<a href="/post/allow-svg-as-an-image-upload/" class="meta-item post-date">#</a>
+			<a href="/tagged/supermodel/" class="tag">supermodel</a>
+		<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./post/allow-svg-as-an-image-upload.md">~</a>
+	</section>
+</section>
+		</article>
+		
+		<input type="checkbox" id="mobile-nav" />
+			<aside>
+			<ul>
+				<li><a href="/tagged/supermodel">Supermodel</a></li>
+				<li><a href="/tagged/javascript">Javascript</a></li>
+				<li><a href="/tagged/css">CSS</a></li>
+				<li><a href="/tagged/terminal">Terminal</a></li>
+				<li><a href="/tagged/mobile">Mobile</a></li>
+				<li><a href="/tagged/hosting">Hosting</a></li>
+			</ul>
+			<p>© <a href="http://sneak.co.nz">Sneak</a></p>
+		</aside>
+		<label for="mobile-nav" class="mobile-toggle">
+			<i class="burger"></i>
+		</label>
+	</div>
+</body>
+</html>

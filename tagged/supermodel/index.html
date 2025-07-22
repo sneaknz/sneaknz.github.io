@@ -26,6 +26,27 @@
 
 	<section class="post">
 		<div class="post-content">
+			<h2 class="title"><a href="/post/allow-svg-as-an-image-upload/">Allow SVG as an image upload</a></h2>
+			<div class="post-text">
+				<p>By default Supermodel does not allow you to upload an SVG into an <code>image</code> field type, but you can allow this by adding configuration for that field to specify all the allowed types:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/gif
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/jpeg
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/png
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/svg+xml
+<span class="token assign-left variable">allowedTypes</span><span class="token operator">=</span>image/webp</code></pre>
+<p>Note that you can't only add the missing SVG type, you must include <em>all</em> the types that you want available.</p>
+
+			</div>
+		</div>
+		<section class="metadata">
+			<a href="/post/allow-svg-as-an-image-upload/" class="meta-item post-date">#</a>
+				<a href="/tagged/supermodel/" class="tag">supermodel</a>
+			<a href="https://github.com/sneaknz/sneaknz.github.io/blob/main/./tagged/index.njk">~</a>
+		</section>
+	</section>
+
+	<section class="post">
+		<div class="post-content">
 			<h2 class="title"><a href="/post/pass-attributes-to-a-supermodel-include/">Pass attributes to a Supermodel include</a></h2>
 			<div class="post-text">
 				<p>When uaing <code>&lt;sm:include&gt;</code> to output a collection of data, it is possible to pass attributes that can be used by the included templates:</p>
