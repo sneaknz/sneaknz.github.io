@@ -60,5 +60,3 @@ The code below contains minimal CSS classes, so it will be up to you to style th
 	</nav>
 </sm:if>
 ~~~
-
-See the [previous instructions]({{ '/post/supermodel-wysiwyg-config-options' | url }}) if you need more detailed configuration.
